@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "d8910e68-75f0-43fa-989e-f88714ad4036",
+		"name": "fileUploading",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get By File Name",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/files/downloadFile/FILENAME.EXTENSION",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"files",
+						"downloadFile",
+						"FILENAME.EXTENSION"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload File",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Gurkan/Desktop/Screenshot_4.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/files/uploadFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"files",
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Multiple Files",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Gurkan/Desktop/Screenshot_3.png"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Gurkan/Desktop/Screenshot_14.png"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Gurkan/Desktop/Screenshot_13.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/files/uploadMultipleFiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"files",
+						"uploadMultipleFiles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
